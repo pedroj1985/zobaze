@@ -23,13 +23,13 @@ class MainRepository(application: MainApplication) {
         val siteListResponse = try {
             apiService.getEmployees()
         } catch (e: java.lang.Exception) {
-            GetEmployeeResponse(status = "", message = getMessage(e), data = arrayListOf())
+            GetEmployeeResponse.empty().copy(message = getMessage(e))
         }
 
         return siteListResponse
     }
 
-    fun getMessage(e: java.lang.Exception): String {
+    private fun getMessage(e: java.lang.Exception): String {
         return when (e) {
             is HttpException -> {
                 when (e.code()) {
