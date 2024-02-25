@@ -1,4 +1,4 @@
-package com.zobaze.zobazerefractortask
+package com.zobaze.zobazerefractortask.ui
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.zobaze.zobazerefractortask.R
 import org.json.JSONObject
 import java.io.InputStream
 import java.net.HttpURLConnection
